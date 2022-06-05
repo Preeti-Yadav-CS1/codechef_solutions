@@ -1,0 +1,17 @@
+# cook your dish here
+t= int(input())
+for i in range(t):
+    n= int(input())
+    A= list(map(int, input().split(' ')))
+    max_sum=0
+    if(n==2):
+       max_sum= A[0]+A[1]
+       print(max_sum)
+    else:
+        for i in range(n-1):
+            av_sum= A[i]+ A[i+1]
+            if( max_sum< av_sum):
+                max_sum= av_sum
+        last_digit_sum= A[0]+A[n-1]
+        maximum= max(max_sum, last_digit_sum)
+        print(maximum)
