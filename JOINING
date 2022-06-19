@@ -1,0 +1,12 @@
+# cook your dish here
+t= int(input())
+for i in range(t):
+    N,K= map(int, input().split(" "))
+    full_pair= int(N/5)
+    remaining= int(K/5)
+    if(N%5==0):
+        full_pair-=1
+    if(K%5==0):
+        remaining-=1 
+    result= round(full_pair- remaining)
+    print(result)
