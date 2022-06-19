@@ -1,0 +1,18 @@
+# cook your dish here
+t= int(input())
+for i in range(t):
+    n= int(input())
+    s= input()
+    word=""
+    i=0
+    while(i<n):
+        if(s[i]=='0' and s[i+1]=='0'):
+           word+="A"
+        elif(s[i]=='0' and s[i+1]=='1'):
+           word+="T" 
+        elif(s[i]=='1' and s[i+1]=='0'):
+           word+="C"
+        else:
+           word+="G"
+        i+=2
+    print(word)
