@@ -1,0 +1,14 @@
+# cook your dish here
+t= int(input())
+for i in range(t):
+    n= int(input())
+    lst= list(map(int, input().split(' ')))[:n]
+    sum_lst= sum(lst)
+    if(n%2==1):
+        print(-1)
+    elif(sum_lst>0):
+        print(int(sum_lst/2))
+    elif(sum_lst<0):
+        print(abs(int(sum_lst/2)))
+    else:
+        print(0)
